@@ -40,6 +40,15 @@ android {
 
 dependencies {
 
+    //retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.google.code.gson:gson:2.9.0")
+
+
+
+    implementation ("io.github.chaosleung:pinview:1.4.4")
+    implementation ("androidx.compose.ui:ui-android:1.6.5")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
