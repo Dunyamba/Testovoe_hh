@@ -42,6 +42,7 @@ class SearchFragment : Fragment() {
                         searchViewModel.mode.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
                             .collect { mode ->
                                 adapter = VacanCardsAdapter(listVacancies, mode)
+                                adapter.submitList(listVacancies)
                                 binding.vacanCards.adapter = adapter
                                 adapter.changeFavoriteStatus =
                                     { searchViewModel.changeStatusFavorite(adapter.id, ) }
