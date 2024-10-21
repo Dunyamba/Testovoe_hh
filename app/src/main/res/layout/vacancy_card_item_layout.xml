@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/search_job_bg"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/vacancy_card_item_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/looking_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_display_400"
+        android:text="Сейчас просматривает 1 человек"
+        android:textColor="#4CB24E"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/search_job_bg"
+        app:layout_constraintTop_toTopOf="@+id/search_job_bg" />
+
+
+    <TextView
+        android:id="@+id/vacancy_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="vac title"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="@+id/search_job_bg"
+        app:layout_constraintStart_toStartOf="@+id/looking_now"
+        app:layout_constraintTop_toBottomOf="@+id/looking_now" />
+
+    <TextView
+        android:id="@+id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vac salary"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/looking_now"
+        app:layout_constraintTop_toBottomOf="@+id/vacancy_title" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="salary, vacancy_title"/>
+
+    <TextView
+        android:id="@+id/vacancy_town"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vac town"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/looking_now"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+    <TextView
+        android:id="@+id/company_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="company name"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/looking_now"
+        app:layout_constraintTop_toBottomOf="@+id/vacancy_town" />
+
+    <ImageView
+        android:id="@+id/icon_circle_checkmark"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/circle_checkmark"
+        app:layout_constraintBottom_toBottomOf="@+id/company_title"
+        app:layout_constraintStart_toEndOf="@+id/company_title"
+        app:layout_constraintTop_toTopOf="@+id/company_title" />
+
+    <ImageView
+        android:id="@+id/icon_case"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/case_icon"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/company_title"
+        app:layout_constraintTop_toBottomOf="@+id/company_title" />
+
+    <TextView
+        android:id="@+id/experience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="experience"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_case"
+        app:layout_constraintStart_toEndOf="@+id/icon_case"
+        app:layout_constraintTop_toTopOf="@+id/icon_case" />
+
+    <TextView
+        android:id="@+id/when_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="when publish"
+        android:textColor="#858688"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/icon_case"
+        app:layout_constraintTop_toBottomOf="@+id/icon_case" />
+
+    <ImageView
+        android:id="@+id/favorite_btn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/favorite_inactive"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/search_job_bg"
+        app:layout_constraintTop_toTopOf="@+id/search_job_bg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_respond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Откликнуться"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/respond_btn"
+        android:textAllCaps="false"
+        android:fontFamily="@font/sf_pro_display_400"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/search_job_bg"
+        app:layout_constraintEnd_toEndOf="@+id/search_job_bg"
+        app:layout_constraintStart_toStartOf="@+id/search_job_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
